@@ -2,11 +2,11 @@
 
 You work for Newcastle’s Department of Smart Transport, which is responsible for developing and maintaining the digital services supporting the Tyne and Wear Metro Network. The department is modernising its systems to improve real-time travel information, passenger experience, and overall network efficiency.
 
-The workstream you’re part of is structured into ****three specialist teams, each responsible for a key part of the system:
+The workstream you’re part of is structured into three specialist teams, each responsible for a key part of the system:
 
-- **Passenger Information Service** – Provides real-time updates on train schedules, platform changes, and service disruptions. This service powers mobile apps and station displays.
-- **Monitoring & Analytics Service** – Tracks train locations, system performance, and crowding levels. This data is used for operational decision-making, predictive maintenance, and improving passenger flow.
-- **Transport Infrastructure Platform** – Provides core services such as APIs, authentication, data pipelines, and messaging infrastructure to support the other teams.
+- **The Passenger Information Service** – Provides real-time updates on train schedules, platform changes, and service disruptions. This service powers mobile apps and station displays.
+- **The Monitoring & Analytics Service** – Tracks train locations, system performance, and crowding levels. This data is used for operational decision-making, predictive maintenance, and improving passenger flow.
+- **The Transport Infrastructure Platform** – Provides core services such as APIs, authentication, data pipelines, and messaging infrastructure to support the other teams.
 
 Each team has clear ownership, but all three must work together to deliver a reliable and efficient transport experience. Your team will take responsibility for one of these services, collaborating with the others to ensure seamless integration. Here’s an overview of each service:
 
