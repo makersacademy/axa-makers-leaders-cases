@@ -1,4 +1,4 @@
-**LiveOtter**
+### LiveOtter
 
 LiveOtter is a platform which sells concert and events tickets. The platform is actually two different products:
 - The 'public' user-facing product, which is a mobile and web application available to the general public – people can use to search and browse for events (by keywords, date or venue, for example).
