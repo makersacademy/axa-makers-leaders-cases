@@ -17,11 +17,11 @@ It also takes a larger fee from enterprise customers integrating with its API,
 offering more flexibility and options as part of the insurance, depending on the
 contract and options agreed with account managers.
 
-Because of the premium cost, SmuvDrive offers SLA (Service Level Agreements) to
+Because of the premium cost, SmuvDrive offers SLAs (Service Level Agreements) to
 its enterprise customers to guarantee a minimum level or service, or offer
 compensation in case these are not met.
 
-These past years have been incredible good for SmuvDrive – the investment in
+These past years have been incredible good for SmuvDrive – the investment in
 product, marketing and sales allowed it to grow at an incredible pace. However,
 this rapid growth came at the cost of technical debt, causing a range of bugs
 and failures in a system which is becoming increasingly complex.
@@ -44,9 +44,16 @@ Your goal will be to plan and collaborate with other teams, with the goal of
 implementing a strong monitoring and incident response strategy across the wider
 engineering team.
 
+The catch? You have only **two months** allocated before members of this team are 
+re-allocated to their original teams. However, management is open to consider extending
+this time if these efforts are successful and bring valuable outcomes. Time is short and 
+you won't have the time to do everything – therefore it'll be important to pick your battles
+and prioritise wisely. To make things more difficult, the extra budget is limited and you will
+need to justify carefully any 'big' spendings into any new infrastructure or tools.
+
 ## Components deep drive
 
-This is the current setup for the company infrastructure – most of it is running
+This is the current setup for the company infrastructure – most of it is running
 on the cloud:
 
 - **Gateway and Load Balancer** - the main 'entrypoint' for any client request
@@ -57,10 +64,10 @@ on the cloud:
   'source of truth' for the data, a PostgreSQL database. It contains all user
   and vehicle data. No client request directly goes to the database, only other
   Services can 'talk' to the database. 
-- **ElasticSearch cluster** – a full-text search software deployed on a cluster
+- **ElasticSearch cluster** – a full-text search software deployed on a cluster
   of machines. This is optimised to answer complex queries such as 'find all
   5-seat cars in Bristol, UK, for a trip between the 4th and the 8th of June,
-  for a price no more than £40/day' – which search services such as
+  for a price no more than £40/day' – which search services such as
   Elasticsearch (ES) can deal with with higher performance than a relational DB.
   Here again, no client talks directly to ES, only other Services can query it.
 - **Main API Service** - can respond to common API queries such as getting
@@ -72,11 +79,11 @@ on the cloud:
   deal with customer credit cards and banks, but connects to a third-party
   payment service processor. This service contains a lot of legacy code, and due to the critical aspect of it, the team owning it isn't keen on letting other engineers work on it. It's usually quite a tedious process to suggest and deploy changes to this component for external teams.
 
-- **Background job Workers** – these processes run on the same machines as the
+- **Background job Workers** – these processes run on the same machines as the
   Main API Service. It's used to run asynchronous jobs which don't need to be
   executed immediately, but can afford a small delay – such as sending an email,
   generating an invoice, etc.
-- **Web application Servers** – used to serve the SmuvDrive website to users
+- **Web application Servers** – used to serve the SmuvDrive website to users
   accessing it by entering smuvdrive.co.uk in their web browser. The website is
   a React frontend which sends requests to other components and API services
   through HTTP.
@@ -96,11 +103,11 @@ diagram](https://eu-west-2.graphassets.com/AXI7KNWwuTwCtIHy5bFnWz/cmc4lcq3eg3eh0
 **For each component, define key metrics and signals to monitor.**
 
 You won't be able to do everything here. Remember the four 'golden signals' of
-monitoring and the three 'pillars' - how can this inform your choice or what to
+monitoring and the three 'pillars' - how can this inform your choice or what to
 observe? Are some metrics more important than other? Why?
 
 - Add challenges (technical but also operational, from team priorities conflict,
-  etc) – find some conflicts here
+  etc) – find some conflicts here
 
 ## 2. Implement monitoring
 
@@ -121,7 +128,7 @@ observe? Are some metrics more important than other? Why?
 In incident response, some common metrics are:
 1. **RTO** (Recovery Time Objective) – which is the time the organisation can afford
    to get the system back available
-2. **RPO** (Recovery Point Objective) – which is the amount of data which we can
+2. **RPO** (Recovery Point Objective) – which is the amount of data which we can
    afford to lose in case of a failure
 3. **MTTR** (Mean Time to Repair) - the approximate time between time of a failure
    and the time where it gets resolved
