@@ -106,13 +106,12 @@ You won't be able to do everything here. Remember the four 'golden signals' of
 monitoring and the three 'pillars' - how can this inform your choice or what to
 observe? Are some metrics more important than other? Why?
 
-- Add challenges (technical but also operational, from team priorities conflict,
-  etc) – find some conflicts here
+Can you foresee any challenges with specific components of the architecture? How are you
+planning to handle these?
 
 ## 2. Implement monitoring
 
 - Define a strategy for your team to implement monitoring in the different components. Which services should you prioritise? Why?
-
 - How will you deal with conflicts of priorities in the other teams owning each of the different components?
 
 ## 3. Define incident response strategies
