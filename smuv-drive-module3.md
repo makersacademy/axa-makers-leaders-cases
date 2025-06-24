@@ -100,40 +100,24 @@ diagram](https://eu-west-2.graphassets.com/AXI7KNWwuTwCtIHy5bFnWz/cmc4lcq3eg3eh0
 
 ## 1. Design monitoring 
 
-**For each component, define key metrics and signals to monitor.**
-
-You won't be able to do everything here. Remember the four 'golden signals' of
-monitoring and the three 'pillars' - how can this inform your choice or what to
-observe? Are some metrics more important than other? Why?
-
-Can you foresee any challenges with specific components of the architecture? How are you
-planning to handle these?
+- Which components of the SmuvDrive platform are most critical to monitor first, considering user impact, business impact, and technical complexity? Can you foresee any challenge with specific components, and how do you plan to handle these?
+- For the identified components, what specific metrics should be tracked (e.g., query response times, error rates for the database)?
+- Given budget constraints, what existing or new tools would you recommend for monitoring these components? Justify the cost and consider tools for logging, metrics collection, and visualization.
+- How do the four 'golden signals' of monitoring and the three 'pillars' inform your choices? Are some metrics more important than others? Why?
 
 ## 2. Implement monitoring
 
-- Define a strategy for your team to implement monitoring in the different components. Which services should you prioritise? Why?
-- How will you deal with conflicts of priorities in the other teams owning each of the different components?
+- Define a strategy for your team to implement monitoring across different components. Which services should you prioritize and why?
+- How would you coordinate with other teams, especially those with tight deadlines or resistance to changes? What strategies would you use to ensure their cooperation?
+- What steps would you take to test and validate your monitoring infrastructure before full deployment? How would you ensure the monitoring system itself is reliable and does not introduce new points of failure?
 
 ## 3. Define incident response strategies
 
-- Imagine possible scenarios where something goes wrong in the system – at least
-  one per component. How should the team react to such events, and how should
-  they prioritise the work to make things go back to normal?
-
-- How can you make sure you implement [root cause
-  analysis](https://www.elastic.co/what-is/root-cause-analysis) as part of your
-  incident response strategy?
-
-In incident response, some common metrics are:
-1. **RTO** (Recovery Time Objective) – which is the time the organisation can afford
-   to get the system back available
-2. **RPO** (Recovery Point Objective) – which is the amount of data which we can
-   afford to lose in case of a failure
-3. **MTTR** (Mean Time to Repair) - the approximate time between time of a failure
-   and the time where it gets resolved
-
-Different components or services can have different values for these metrics,
-depending on how critical they are. How would you define yours?
+- How would you classify incidents based on severity and impact? What criteria would you use to determine if an incident is critical, major, or minor?
+- Imagine possible failure scenarios for some of the most critical components. How should the team react to such events, and how should they prioritise work to bring back the system to a healthy state?
+- What escalation procedures would you put in place to ensure incidents are addressed in time and effectively? How would you ensure the right people get notified at the right time?
+- How can you ensure the implementation of [root cause analysis](https://www.elastic.co/what-is/root-cause-analysis) as part of your incident response strategy?
+- How would you define Recovery Time Objective (RTO), Recovery Point Objective (RPO), and Mean Time to Repair (MTTR) for different components or services based on their criticality?
 
 ## 4. Assess your strategy (presentations)
 
