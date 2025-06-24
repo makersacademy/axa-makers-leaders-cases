@@ -99,7 +99,20 @@ Below is a diagram illustrating the overall system architecture:
 
 ### Questions
 
+We might not have the time to cover all of the questions below, and that's OK. Each of them is open-ended and can prompt a discussion to gain better insights into the LiveOtter's current processes and potential improvements. Feel free to use these prompts as a tool to reflect on the case presented above, but also to apply them to some scenarios you might pick from your own experience.
+
 - How observability could have prevented such a scenario to happen? What signals the team could have used to understand that failure was about to happen?
+
 - All these engineers are competent – although they wrongly assumed, in this case, that scaling the API layer with more machines would resolve the problem. Put yourself in their shoes: why do you think they made this assumption? Can you find any similar cases from your own experience where wrong assumptions were made and prevented a problem to be resolved quickly?
+
 - A 'single point of failure' (SPOF) or a 'bottleneck' in a system is a component which can cause the entire system to fail if it fails itself. Their presence is usually a key reason why complex software systems fail. How, in this case, a single point of failure caused a problem? Can you see any other potential SPOF in this system which engineers should have a look at?
+
 - There are a few mentions of work being done to make the backend 'more efficient' or the database 'handle even this many people connecting at once', etc. Without observability, what can be the issues here? If this were your team, what could you suggest, as a technical leader, to improve the way they're working on improving performance of systems they work on?
+
+- How might the interconnected nature of LiveOtter's backend systems (SQL database, in-memory cache, search service) complicate the monitoring and identification of performance bottlenecks? What strategies could be employed to better isolate and diagnose issues in such a complex architecture?
+
+- Throughout the case, the team appears to react to issues as they arise. What proactive monitoring strategies could have been implemented to anticipate and mitigate the problems encountered during releases?
+
+- Evaluate the team's communication and incident response process during the outage. What improvements could be made to ensure more effective coordination and faster resolution of issues in the future?
+
+- After resolving the outage, what steps should the team take in a post-incident review to learn from the experience and implement changes that will prevent similar issues in the future? What metrics and data should be collected during incidents to facilitate this review process?
